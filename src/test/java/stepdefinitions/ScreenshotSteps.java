@@ -25,7 +25,7 @@ public class ScreenshotSteps {
     private String bucketName;
     private String region;
 
-    @Given("the browser is launched")
+    @Given("Browser is launched")
     public void launchBrowser() {
 
         accessKey = System.getenv("AWS_ACCESS_KEY_ID");
@@ -53,16 +53,13 @@ public class ScreenshotSteps {
 
         page = browser.newPage();
     }
-
-    @When("I navigate to {string}")
+    @When("navigate to {string}")
     public void navigateToWebsite(String url) {
-
         page.navigate(url);
     }
 
-    @When("I capture a screenshot named {string}")
+    @When("capture a screenshot named {string}")
     public void captureScreenshot(String fileName) {
-
         screenshotPath = Paths.get(fileName);
 
         page.screenshot(
