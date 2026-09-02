@@ -23,7 +23,7 @@ jobs:
         run: mvn clean test-compile
 
       - name: Install Playwright Browsers
-        run: mvn exec:java -Dexc.mainClass=com.microsoft.playwright.CLI -Dexec.args="install chromium"
+        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install chromium"
 
       - name: Run Playwright Scripts
         env:
